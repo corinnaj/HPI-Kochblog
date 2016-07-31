@@ -14,29 +14,26 @@ the_post(); ?>
 			<div class="rating">
 				<strong>Kochklub-Wertung: </strong>
 				<?php
-					$rating = get_field('cc-rating');
+					$rating = get_field('kochklubwertung');
 					for ($i = 1; $i <= 5; $i++) {
 						echo '<span class="glyphicon glyphicon-star'.($i <= $rating ? '' : '-empty').'"></span>';
 					} ?>
 			</div>
-
 			<?php get_sidebar(); ?>
 		</div>
 		<div class="col-md-8">	
 			<?php the_content(); ?>
-
-			<?php
-				$i = 1;
-				foreach (CFS()->get('steps') as $field) {
-					echo '<h4>'.$i.'</h4>';
-
-					if ($field['image'])
-						echo wp_get_attachment_image($field['image']);
-
-					echo $field['instructions'];
-					$i++;
-				}
-			?>
+			<p>
+				<?php the_field('duration');  ?>
+			</p>
+			<?php if( have_rows('ingredients') ): ?>
+    			<ul>
+   					<?php while( have_rows('ingredients') ): the_row(); ?>
+					<li> <?php the_sub_field('amount'); ?> <?php the_sub_field('unit'); ?> <?php the_sub_field('ingredient') ?> </li>
+        
+    				<?php endwhile; ?>
+    			</ul>
+			<?php endif; ?>	
 		</div>
 	</div>		
 </div>

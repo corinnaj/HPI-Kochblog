@@ -17,6 +17,12 @@ add_action("init", function(){
 		)
 	));
 });
+add_action("widgets_init", function(){
+	register_sidebar(array(
+		'id' => 'recipe',
+		'name' => __( 'Recipe' )
+	));
+});
 add_theme_support("post-thumbnails");
 add_filter("pre_get_posts", function($query){
 	if((is_home() || is_archive()) && $query->is_main_query())
