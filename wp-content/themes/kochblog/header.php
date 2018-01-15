@@ -6,6 +6,8 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/bootstrap.css">
 		<link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/main.css">
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Bitter|Cousine:700" rel="stylesheet"> 
 	</head>
 	<body>
 		<header>

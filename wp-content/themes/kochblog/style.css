@@ -5,3 +5,79 @@ Description: Theme for the HPI Cooking Blog.
 Version: 0.1
 
 */
+
+.post-single h2 {
+	font-family: 'Bitter', serif;
+	font-size: 32px;
+}
+
+h3 {
+	margin: 1rem;
+	font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+	width: 80%;
+	border-color: black;
+}
+
+#ingredients {
+  border-right: 1px solid #999999; /* Border on the left */
+}
+
+#ingredients ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#ingredients li {
+	font-style: italic;
+	font-family: 'Open Sans', sans-serif;
+	margin: 1rem;
+}
+
+#steps {
+  counter-reset: step-counter;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#steps li {
+	position: relative;
+	padding: 4px 0 10px 0;
+	padding-left: 50px;
+	font-family: 'Open Sans', sans-serif;
+	color: #333;
+}
+
+#steps li:before {
+	content: counter(step-counter);
+	counter-increment: step-counter;
+	font-family: 'Cousine', monospace;
+	font-size: 50px;
+	font-style: bold;
+	position: absolute;
+	top: -7px;
+	left: 0;
+	margin: 1rem;
+	margin-top: 0;
+}
+
+.title-image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+#colorRect {
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	width: 250px;
+	box-shadow: 6px 6px 5px 1px rgba(0, 0, 0, .4);
+}
+
+#colorRect p {
+	padding: 1rem;
+	padding-top: 0;
+	font-family: 'Open Sans', sans-serif;
+}
