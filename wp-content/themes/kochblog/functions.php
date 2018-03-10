@@ -7,6 +7,7 @@ add_action("init", function(){
 		"has_archhive" => true,
 		"menu_position" => 5,
 		"menu_icon" => "dashicons-carrot",
+		"taxonomies" => array("category", "post_tag"),
 		"labels" => array(
 			"name" => "Recipes",
 			"singular_name" => "Recipe",

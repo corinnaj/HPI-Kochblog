@@ -22,7 +22,7 @@ hr {
 }
 
 #ingredients {
-  border-right: 1px solid #999999; /* Border on the left */
+  border-right: 1px solid #999999;
 }
 
 #ingredients ul {
@@ -34,6 +34,11 @@ hr {
 	font-style: italic;
 	font-family: 'Open Sans', sans-serif;
 	margin: 1rem;
+}
+
+.ingredient-header {
+  font-style: italic;
+  font-weight: bold;
 }
 
 #steps {
